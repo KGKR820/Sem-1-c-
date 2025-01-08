@@ -16,7 +16,7 @@ int main (){
 int arr[size];
 for (int i = 0;i<size;i++){
     printf("Element %d -> ",i+1);
-    scanf("%d",&arr[i]); // arr[]={1,2,3,4,5}
+    scanf("%d",&arr[i]); // arr[]={3,4,1,2,5}
 }
 printf("original array -> ");
 for (int i = 0;i<size;i++){
@@ -34,16 +34,16 @@ for (int i = 0;i<size;i++){
 reverse (arr,1,size);
 printf("\nReversed array -> ");
 for (int i = 0;i<size;i++){
-    printf("%d ",arr[i]); // arr[]={5,4,3,2,1}
+    printf("%d ",arr[i]); // arr[]={5,2,1,4,3}
 }
 int k;
 printf("\nEnter the turn to rotate -> ");
 scanf("%d",&k); // ex: k=8 -> 8%5=3 -> k=3
 if (k>size) k=k%size;
 reverse (arr,1,k);  // from from 1st(0th) number to k(k-1) number
-// arr[]= {3,4,5,2,1}
+// arr[]= {1,2,5,4,3}
 reverse (arr,k+1,size);
-// arr[]= {3,4,5,1,2}
+// arr[]= {1,2,5,3,4}
 printf("Rotated array -> ");
 for (int i = 0;i<size;i++){
     printf("%d ",arr[i]);
